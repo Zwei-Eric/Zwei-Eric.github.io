@@ -18,7 +18,7 @@ title: data
 		color: #FFF;
 		font-weight: bold;
 	}
-	.tableizer-table.1st{
+	.1st{
 		background-color: #9a9a9a;
 	}
 </style>
