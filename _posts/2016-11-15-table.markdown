@@ -18,9 +18,12 @@ title: data
 		color: #FFF;
 		font-weight: bold;
 	}
+	.1st{
+		background-color: #9a9a9a;
+	}
 </style>
 <table class="tableizer-table">
-<thead><tr class="tableizer-firstrow"><th>N</th><th>Unused</th><th>Total</th><th>%Cov</th><th>%Cov(50)</th><th>%Cov(95)</th><th>Accession</th><th>Name</th><th>Species</th><th>Peptides(95%)</th><th>115:113</th><th>116:113</th><th>115:114</th><th>116:114</th><th>Average(Ctrl:OT)</th><th>Average(OT:Ctrl)</th></tr></thead><tbody>
+<thead><tr class="tableizer-firstrow"><th>N</th><th>Unused</th><th>Total</th><th>%Cov</th><th>%Cov(50)</th><th>%Cov(95)</th><th>Accession</th><th>Name</th><th>Species</th><th>Peptides(95%)</th><th>115:113</th><th>116:113</th><th>115:114</th><th>116:114</th><th>Average(Ctrl:OT)</th><th>Average(OT:Ctrl)</th></tr></thead><tbody class="1st">
  <tr><td>1974</td><td>5.94</td><td>6</td><td>78.57000232</td><td>39.28999901</td><td>39.28999901</td><td>sp|P45878|FKBP2_MOUSE</td><td>Peptidyl-prolyl cis-trans isomerase FKBP2 OS=Mus musculus GN=Fkbp2 PE=1 SV=1</td><td>MOUSE</td><td>3</td><td>7.17794323</td><td>5.152287006</td><td>1.429051518</td><td>1.019521236</td><td>3.694700748</td><td>0.270657915</td></tr>
  <tr><td>2459</td><td>3.82</td><td>3.82</td><td>48.82000089</td><td>21.17999941</td><td>18.24000031</td><td>sp|Q9D2P8|MOBP_MOUSE</td><td>Myelin-associated oligodendrocyte basic protein OS=Mus musculus GN=Mobp PE=1 SV=1</td><td>MOUSE</td><td>3</td><td>5.199960232</td><td>4.786301136</td><td>1.886766911</td><td>1.818888068</td><td>3.422979087</td><td>0.292143181</td></tr>
  <tr><td>824</td><td>17.2</td><td>17.48</td><td>52.43999958</td><td>35.3700012</td><td>32.51999915</td><td>sp|Q61885|MOG_MOUSE</td><td>Myelin-oligodendrocyte glycoprotein OS=Mus musculus GN=Mog PE=1 SV=1</td><td>MOUSE</td><td>11</td><td>4.092607021</td><td>4.405549049</td><td>1.686470866</td><td>1.737001657</td><td>2.980407148</td><td>0.335524628</td></tr>
