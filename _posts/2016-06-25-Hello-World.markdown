@@ -10,4 +10,4 @@ Hello World !
  而且模版样式看起来也很顺眼
 [here is possible to download the file in excel][1]
 
-[1]:{{ https://inarii.github.io }}1.pdf
+[1]:{{ https://inarii.github.io }}1.xlsx
