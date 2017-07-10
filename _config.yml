@@ -9,7 +9,7 @@
 title: 友人A的教室
 email: 250343345@qq.com
 description: > # this means to ignore newlines until "baseurl:"
-  张志威的第一个博客，写给自己看。
+  This is my first blog. There're some records of my thinking and what I've learned.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
