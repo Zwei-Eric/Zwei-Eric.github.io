@@ -59,7 +59,17 @@ System.out.println(time);
    </dependency>
    ```
 
-   3.在项目的类Bean中，需要给LocalDate的成员变量加上`DateTimeFormat(pattern = "yyyy-MM-dd")` 注解来表示时间格式的解析规则，否则从前端返回数据注入到容器中会出现解析错误的情况。
+   3.在项目的类Bean中，需要给LocalDate的成员变量加上`DateTimeFormat(pattern = "yyyy-MM-dd")` 注解来表示时间格式的解析规则，否则从前端返回数据注入到容器中会出现解析错误的情况。注意这时输入字符串的格式必须严格和规定格式相同：yyyy-MM-dd，否则还是会报解析错误400代码。
+
+```java
+import java.time.LocalDate;
+public class Employee {
+...
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate birthday;
+...
+}
+```
 
    ```java
    import java.time.LocalDate;
