@@ -49,7 +49,7 @@ System.out.println(time);
    <input name="birthday" type="text" class="form-control" placeholder="yyyy-mm-dd" th:value="${emp!=null}?${#temporals.format(emp.birthday, 'yyyy-MM-dd')}">
    ```
 
-   2.在pom文件中增加mybatis对LocalDate类型解析的依赖，需要的包是jsr310，如下代码所示。
+   2.在pom文件中增加mybatis对LocalDate类型解析的依赖，需要的包是jsr310，如下代码所示。而在前后端分离的项目中，后端把数据json化，需要添加json时间格式化的依赖，才能正确地把localDate类型转换成格式化时间字符串。
 
    ```xml
    <dependency>
@@ -57,28 +57,29 @@ System.out.println(time);
    	<artifactId>mybatis-typehandlers-jsr310</artifactId>
    	<version>1.0.0</version>
    </dependency>
+   <!-- localdatetime json格式化支持-->
+<dependency>
+   	<groupId>com.fasterxml.jackson.datatype</groupId>
+   	<artifactId>jackson-datatype-jsr310</artifactId>
+   	<version>${jackson.version}</version>
+   </dependency>
    ```
-
+   
    3.在项目的类Bean中，需要给LocalDate的成员变量加上`DateTimeFormat(pattern = "yyyy-MM-dd")` 注解来表示时间格式的解析规则，否则从前端返回数据注入到容器中会出现解析错误的情况。注意这时输入字符串的格式必须严格和规定格式相同：yyyy-MM-dd，否则还是会报解析错误400代码。
+   
+   从后端转成前端所需的json数据则需要`@JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")`注解
+   
+   
 
 ```java
 import java.time.LocalDate;
 public class Employee {
 ...
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
 	private LocalDate birthday;
 ...
 }
 ```
-
-   ```java
-   import java.time.LocalDate;
-   public class Employee {
-   ...
-   	@DateTimeFormat(pattern = "yyyy-MM-dd")
-   	private LocalDate birthday;
-   ...
-   }
-   ```
 
 数据库端不需要做修改，可以继续使用DATE数据类型，也能正确地从LocalDate转换到DATE类型。
