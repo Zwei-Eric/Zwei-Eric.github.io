@@ -58,14 +58,14 @@ System.out.println(time);
    	<groupId>org.mybatis</groupId>
    	<artifactId>mybatis-typehandlers-jsr310</artifactId>
    	<version>1.0.0</version>
-</dependency>
+    </dependency>
    
-   <dependency>
+    <dependency>
    	<groupId>com.fasterxml.jackson.datatype</groupId>
    	<artifactId>jackson-datatype-jsr310</artifactId>
    	<version>${jackson.version}</version>
-   </dependency>
-   ```
+    </dependency>
+    ```
    
    
    
