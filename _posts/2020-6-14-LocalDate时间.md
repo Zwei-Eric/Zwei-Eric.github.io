@@ -59,7 +59,7 @@ System.out.println(time);
    	<artifactId>mybatis-typehandlers-jsr310</artifactId>
    	<version>1.0.0</version>
 </dependency>
-   localdatetime json格式化支持
+   
    <dependency>
    	<groupId>com.fasterxml.jackson.datatype</groupId>
    	<artifactId>jackson-datatype-jsr310</artifactId>
