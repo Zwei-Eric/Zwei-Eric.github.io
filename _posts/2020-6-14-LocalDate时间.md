@@ -51,19 +51,23 @@ System.out.println(time);
 
    2.在pom文件中增加mybatis对LocalDate类型解析的依赖，需要的包是jsr310，如下代码所示。而在前后端分离的项目中，后端把数据json化，需要添加json时间格式化的依赖，才能正确地把localDate类型转换成格式化时间字符串。
 
+   
+   
    ```xml
    <dependency>
    	<groupId>org.mybatis</groupId>
    	<artifactId>mybatis-typehandlers-jsr310</artifactId>
    	<version>1.0.0</version>
-   </dependency>
-   <!-- localdatetime json格式化支持-->
-<dependency>
+</dependency>
+   localdatetime json格式化支持
+   <dependency>
    	<groupId>com.fasterxml.jackson.datatype</groupId>
    	<artifactId>jackson-datatype-jsr310</artifactId>
    	<version>${jackson.version}</version>
    </dependency>
    ```
+   
+   
    
    3.在项目的类Bean中，需要给LocalDate的成员变量加上`DateTimeFormat(pattern = "yyyy-MM-dd")` 注解来表示时间格式的解析规则，否则从前端返回数据注入到容器中会出现解析错误的情况。注意这时输入字符串的格式必须严格和规定格式相同：yyyy-MM-dd，否则还是会报解析错误400代码。
    
